@@ -18,7 +18,7 @@ routes.forEach((route) => {
 
 connectDB();
 
-server.listen(envConfig.port || 3000, (err, address) => {
+server.listen(envConfig.port || 3000, envConfig.host, (err, address) => {
   if (err) {
     logger.error(err);
     process.exit(1);

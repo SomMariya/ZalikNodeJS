@@ -10,5 +10,5 @@ export const envConfig = {
     cluster: process.env.DB_CLASTER
   },
   port: process.env.PORT,
-  host: '127.0.0.1'
+  host: '0.0.0.0'
 };
