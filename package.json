@@ -1,7 +1,10 @@
 {
   "name": "zalik-nodejs",
   "version": "1.0.0",
-  "description": "",
+  "engines": {
+    "node": ">=14 <15",
+    "npm": ">=6 <7"
+  },
   "main": "index.js",
   "scripts": {
     "start": "node -r esm index.js",
@@ -10,6 +13,19 @@
     "lint:fix": "eslint \"**/*.{js,json} --fix\"",
     "prettier": "prettier --check \"**/*.{js,json}\"",
     "prettier:fix": "prettier --write \"**/*.{js,json}\""
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "pre-push": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "**/*.{ts,js}": [
+      "npm run format",
+      "npm run lint",
+      "git add"
+    ]
   },
   "repository": {
     "type": "git",
@@ -34,6 +50,8 @@
     "eslint": "^8.5.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^4.0.0",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.1.4",
     "nodemon": "^2.0.15",
     "prettier": "^2.5.1"
   }
