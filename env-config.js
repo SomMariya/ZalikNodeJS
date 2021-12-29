@@ -7,7 +7,7 @@ export const envConfig = {
     user: process.env.DB_USER,
     password: process.env.DB_PASSWORD,
     database: process.env.DB_DATABASE,
-    cluster: process.env.DB_CLASTER
+    cluster: process.env.DB_CLUSTER
   },
   port: process.env.PORT,
   host: '0.0.0.0'
