@@ -1,0 +1,40 @@
+{
+  "name": "zalik-nodejs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node -r esm index.js",
+    "start:dev": "nodemon -r esm index.js",
+    "lint": "eslint \"**/*.{js,json}\"",
+    "lint:fix": "eslint \"**/*.{js,json} --fix\"",
+    "prettier": "prettier --check \"**/*.{js,json}\"",
+    "prettier:fix": "prettier --write \"**/*.{js,json}\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SomMariya/ZalikNodeJS.git"
+  },
+  "author": "Som Mariya",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SomMariya/ZalikNodeJS/issues"
+  },
+  "homepage": "https://github.com/SomMariya/ZalikNodeJS#readme",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "esm": "^3.2.25",
+    "fastify": "^3.25.3",
+    "fastify-cors": "^6.0.2",
+    "mongoose": "^6.1.4",
+    "pino": "^7.6.2",
+    "pino-pretty": "^7.3.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.5.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "nodemon": "^2.0.15",
+    "prettier": "^2.5.1"
+  }
+}
