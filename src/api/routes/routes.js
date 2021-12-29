@@ -4,7 +4,7 @@ import { get, post } from '../services';
 export const routes = [
   {
     method: 'GET',
-    url: '/api/blogs/:id',
+    url: '/api',
     handler: handler(() => get())
   },
   {
