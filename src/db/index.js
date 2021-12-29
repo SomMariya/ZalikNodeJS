@@ -1,1 +1,1 @@
-export * from './zalik-node';
+export * from './zalik-node';

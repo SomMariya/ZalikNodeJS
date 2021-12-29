@@ -1,1 +1,1 @@
-export const Url = 'https://jsonplaceholder.typicode.com';
+export const Url = 'https://jsonplaceholder.typicode.com';export const Url2 = 'http://api.openweathermap.org/data/2.5';
