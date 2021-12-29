@@ -38,6 +38,7 @@
   },
   "homepage": "https://github.com/SomMariya/ZalikNodeJS#readme",
   "dependencies": {
+    "axios": "^0.24.0",
     "dotenv": "^10.0.0",
     "esm": "^3.2.25",
     "fastify": "^3.25.3",

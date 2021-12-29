@@ -9,6 +9,7 @@ export const envConfig = {
     database: process.env.DB_DATABASE,
     cluster: process.env.DB_CLUSTER
   },
+  apiKey: process.env.API_KEY,
   port: process.env.PORT,
   host: '0.0.0.0'
 };
