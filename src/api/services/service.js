@@ -7,7 +7,7 @@ import { CityData } from '../../models';
 
 export const getWeather = async (city_name) => {
   try {
-    const city = CityData.find({ name: city_name });
+    const city = await CityData.findOne({ name: city_name });
     if (city) {
       return city;
     } else {
@@ -15,6 +15,7 @@ export const getWeather = async (city_name) => {
         `${Url}/weather?q=${city_name}&appid=${envConfig.apiKey}`
       );
       await CityData.create(response.data);
+      return response.data;
     }
   } catch {
     throw new HttpError({
