@@ -10,10 +10,12 @@ export const getWeather = async (city_name) => {
     const response = await axios.get(
       `${Url}/weather?q=${city_name}&appid=${envConfig.apiKey}`
     );
-    //const city = CityData.find({ name: city_name });
-
-    await CityData.create(response.data);
-    return response.data;
+    const city = CityData.find({ name: city_name });
+    if (city) {
+      return city;
+    } else {
+      await CityData.create(response.data);
+    }
   } catch {
     throw new HttpError({
       message: 'Oops! Can not get weather for this city',
